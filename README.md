@@ -11,6 +11,8 @@
 # reading a file
 # writing a file
 # appending a file
+# with statement
+# without statement
 
 
 # opening a file 
@@ -40,3 +42,15 @@ f.close()
 f=open('smile.txt','w') #### give the file name which is not existed then it will create the file with that name and writes the data in it #####
 f.write("Tejaswini...")
 f.close()
+--> output = Tejaswini
+
+# append the data in file
+f=open('smile.txt','a')
+f.write(" how are you") it will append the data into the file 
+f.close()
+--> output = Tejaswini how are you
+
+# with statement
+*** with open('file.txt','w') as f: ***
+with open('smile.txt','w') as f:  ----> we can also use not existed file in file name
+    f.write("Hello Teju... How are you")
