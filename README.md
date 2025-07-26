@@ -21,3 +21,22 @@ userdefines=open(filename,mode of the file)
       if the recomended file is already exist it will write the data in that file if there is no file it will create the file with recomended name
 --> a :- append
       the write will clear the previous data from the file and add new data but the append will add the data to the existing file
+
+
+# reading the data of the file
+--> create a folder and store some data in file and than write a code to fetch the data of the file to the present file
+
+file=open('teju.txt', 'r')
+data= file.read()
+print("file data in teju.txt: ",data)
+file.close()
+
+# writing the data in file when the file exists
+f=open('write.txt','w')
+f.write("Tejaswini...")
+f.close()
+
+# writing the data in file when the file not exists
+f=open('smile.txt','w') #### give the file name which is not existed then it will create the file with that name and writes the data in it #####
+f.write("Tejaswini...")
+f.close()
