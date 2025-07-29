@@ -54,3 +54,13 @@ f.close()
 *** with open('file.txt','w') as f: ***
 with open('smile.txt','w') as f:  ----> we can also use not existed file in file name
     f.write("Hello Teju... How are you")
+
+
+
+
+# EXTENSIONS
+--> r+ --> File should exist /overwrites existing content
+--> w+ -->Content clarity(refreshes the file)
+--> a+ --> Creates a file if not exists, reading woks only after seek()  # [seak() = input from scrach]
+                                                                         # [truncate() = the requires data will be taken and unwanted data is removed]
+-->
