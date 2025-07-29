@@ -63,4 +63,42 @@ with open('smile.txt','w') as f:  ----> we can also use not existed file in file
 --> w+ -->Content clarity(refreshes the file)
 --> a+ --> Creates a file if not exists, reading woks only after seek()  # [seak() = input from scrach]
                                                                          # [truncate() = the requires data will be taken and unwanted data is removed]
--->
+
+
+
+# pgrm
+filename='root.txt'
+with open(filename,'w') as f:
+    f.write("my full name is tejaswini.\n")
+with open(filename, 'r+') as file:
+    print("latest data:")
+    print(file.read())
+    file.seek(0)
+    userinput=input("\n enter text to overwrite from begining...")
+    file.write(userinput)
+    file.seek(0)
+    print("\n file after writting by r+")
+    print(file.read())
+
+# pgrm
+with open('line.txt','a+') as file:
+    text=input("enter a line to append")
+    file.write(text+'\n')
+    file.seek(0)
+    print("\n current content in the file")
+    print(file.read())
+# pgrm
+'''Write a code that accepts filename as input from the user open the file and count the number if characters appear in the file
+   input:s
+   output:4
+   filedata:mississippi'''
+# pgrm
+filename=input("enter filename with extensions")
+with open(filename,'r') as file:
+    text=file.read()
+    letter=input("enter a char to search frequency:")
+    count=0
+    for char in text:
+        if char==letter:
+            count +=1
+print(letter,"appears",count,"times in the file")
